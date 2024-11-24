@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block title %}fasilitas{% endblock title %} 
+{%block content %}
+
+<h2 class="flex justify-center font-bold text-black py-10">
+  Fasilitas Rumah Sakit Sehat Sejahtera
+</h2>
+
+<h2 class="font-bold text-green-600 italic">Fasilitas</h2>
+<p class="font-bold text-black pl-8">
+  • Unit Gawat Darurat 24 jam dengan penanganan kasus darurat jantung dan
+  stroke. <br />
+  • Ruang operasi modern dengan standar internasional. <br />
+  • Laboratorium diagnostik lengkap. <br />
+  • Fasilitas rawat inap nyaman dengan berbagai kelas. <br />
+  • Klinik rawat jalan dengan layanan konsultasi spesialis.
+</p>
+
+<br />
+
+<h2 class="font-bold text-green-600 italic">Fasilitas</h2>
+  <p class="font-bold text-black pl-8 mb-8">
+  • Mengutamakan teknologi medis terkini seperti MRI, CT Scan, dan EKG untuk
+  diagnosa cepat dan akurat. <br> • Tim dokter spesialis jantung dan saraf
+  berpengalaman lebih dari 10 tahun. <br> • Program edukasi kesehatan untuk
+  masyarakat seputar pencegahan penyakit jantung dan stroke.
+  </p>
+
+<h2 class="font-bold text-green-600 italic mb-4">Kamar</h2>
+
+<!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  {% for kamar in kamars %}
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img class="w-full h-48 object-cover" src="{{ kamar.gambar.url }}" alt="Image of {{ kamar.nama }}">
+      <div class="p-4">
+          <h3 class="text-xl font-bold text-center">{{ kamar.nama }}</h3>
+          <p class="mt-2 text-gray-700">{{ kamar.fasilitas }}</p>
+      </div>
+  </div>
+  
+  {% endfor %}
+</div> -->
+
+<div class=" grid grid-cols-3">
+  {% for kamar in kamars %}
+  <div class=" border-black border-x-2 border-b-2">
+    <h2 class="border-t-2  border-black flex justify-center font-bold text-black">{{kamar.nama}}</h2>
+    <div class="border-y-2  border-black  w-full h-60 g-4 overflow-hidden p-4">
+       <img class="w-full h-full object-cover" src="{{ kamar.gambar.url }}" alt="">
+    </div>
+  <p class="p-4 text-black border-t-2">{{kamar.fasilitas}} </p>
+  </div>
+  
+  {% endfor %}
+  </div>
+
+{% endblock content %}
